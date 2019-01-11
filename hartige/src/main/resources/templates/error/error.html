@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="fragments/head :: head"></head>
+<body>
+
+<div th:replace="fragments/header :: header"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <h1 th:text="${title}" class="page-header">Error page</h1>
+                <p th:text="${lead}" class="lead">Er is een fout opgetreden.</p>
+                <p>Message: <span th:utext="${message}">message</span></p>
+                <p>Url: <span th:utext="${url}">url</span></p>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <p th:text="${exception}">Exception message </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div th:replace="fragments/footer :: footer" />
+    </footer>
+    </body>
+</html>
