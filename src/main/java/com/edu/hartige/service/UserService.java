@@ -32,12 +32,12 @@ public class UserService {
         return userRepository.findByEmail(email);
     }
 
-    public User saveUser(User user) {
+    public void saveUser(User user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         user.setActive(1);
         Role userRole = roleRepository.findByRole("ADMIN");
-        user.setRoles(new HashSet<Role>(Collections.singletonList(userRole)));
-        return userRepository.save(user);
+        user.setRoles(new HashSet<>(Collections.singletonList(userRole)));
+        userRepository.save(user);
     }
 
 }

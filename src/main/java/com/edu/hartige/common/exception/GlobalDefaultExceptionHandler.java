@@ -17,7 +17,7 @@ class GlobalDefaultExceptionHandler {
     private final Logger logger = LoggerFactory.getLogger(GlobalDefaultExceptionHandler.class);
 
     @ExceptionHandler(value = ProductNotFoundException.class)
-    public ModelAndView loanNotFoundExceptionHandler(HttpServletRequest req, Exception e) throws Exception {
+    public ModelAndView loanNotFoundExceptionHandler(HttpServletRequest req, Exception e) {
         logger.error(e.getClass().getSimpleName() + ": " + e.getMessage());
         return buildModelAndView(req.getRequestURL(), e);
     }

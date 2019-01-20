@@ -17,17 +17,21 @@ import javax.sql.DataSource;
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-    @Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
+    private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    @Autowired
-    private DataSource dataSource;
+    private final DataSource dataSource;
 
     @Value("${spring.queries.users-query}")
     private String usersQuery;
 
     @Value("${spring.queries.roles-query}")
     private String rolesQuery;
+
+    @Autowired
+    public SecurityConfiguration(BCryptPasswordEncoder bCryptPasswordEncoder, DataSource dataSource) {
+        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+        this.dataSource = dataSource;
+    }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth)
@@ -61,7 +65,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 
     @Override
-    public void configure(WebSecurity web) throws Exception {
+    public void configure(WebSecurity web) {
         web
                 .ignoring()
                 .antMatchers("/static/**", "/css/**", "/js/**", "/images/**");

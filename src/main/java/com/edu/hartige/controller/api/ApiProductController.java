@@ -15,18 +15,18 @@ public class ApiProductController {
 
     private ArrayList<Product> products = new ArrayList<>();
 
-//    @GetMapping(value = "/")
-//    ArrayList<Product> getProductsAsJSON() {
-//        logger.trace("getProducts was called.");
-//        return products;
-//    }
-//
-//    @PostMapping(value = "/")
-//    ArrayList<Product> createProductAsJSON(@RequestBody Product product) {
-//        logger.trace("createProduct was called.");
-//        products.add(product);
-//        return products;
-//
-//    }
+    @GetMapping(value = "/")
+    ArrayList<Product> getProductsAsJSON() {
+        logger.trace("getProducts was called.");
+        return products;
+    }
+
+    @PostMapping(value = "/")
+    ArrayList<Product> createProductAsJSON(@RequestBody Product product) {
+        logger.trace("createProduct was called.");
+        products.add(product);
+        return products;
+
+    }
 
 }

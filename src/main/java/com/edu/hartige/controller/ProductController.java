@@ -42,7 +42,6 @@ public class ProductController {
     @Transactional
     @GetMapping(value = "/addsomemore")
     public ModelAndView addSomeMoreProducts(Model model) {
-
         logger.debug("addSomeMoreProducts called.");
 
         createOrder();

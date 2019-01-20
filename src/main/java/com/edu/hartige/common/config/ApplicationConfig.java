@@ -6,8 +6,6 @@ import com.edu.hartige.domain.ProductCatalog;
 import com.edu.hartige.repository.BaseOrderRepository;
 import com.edu.hartige.repository.ProductCatalogRepository;
 import com.edu.hartige.repository.ProductRepository;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 
@@ -15,8 +13,6 @@ import javax.annotation.PostConstruct;
 
 @Configuration
 public class ApplicationConfig {
-
-    private static final Logger logger = LoggerFactory.getLogger(ApplicationConfig.class);
 
     private final BaseOrderRepository orderRepository;
 
@@ -47,7 +43,7 @@ public class ApplicationConfig {
         prod2 = productRepository.save(prod2);
 
         Order order = new Order();
-        order = orderRepository.save(order);
+        orderRepository.save(order);
 
         productCatalog.add(prod1, 2);
         productCatalog.add(prod2, 3);

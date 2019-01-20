@@ -15,8 +15,11 @@ public class GreetingController {
     @RequestMapping("/greeting")
     public String greeting(
             @RequestParam(value = "name", required = false, defaultValue = "World") String name,
-            Model model) throws Exception {
+            Model model) {
         model.addAttribute("name", name);
+
+        logger.info("greeting user");
+
         return "views/greeting/greeting";
     }
 
