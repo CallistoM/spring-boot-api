@@ -1,7 +1,6 @@
 # spring-boot-api
 
 [![Build Status](https://travis-ci.org/CallistoM/spring-boot-api.svg?branch=master)](https://travis-ci.org/CallistoM/spring-boot-api)
-[![Coverage Status](https://coveralls.io/repos/github/codecentric/springboot-sample-app/badge.svg?branch=master)](https://coveralls.io/github/codecentric/springboot-sample-app?branch=master)
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 Minimal [Spring Boot](http://projects.spring.io/spring-boot/) sample app.
