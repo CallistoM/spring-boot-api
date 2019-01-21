@@ -1,7 +1,6 @@
 package com.edu.hartige.domain;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
@@ -14,7 +13,6 @@ import javax.validation.constraints.NotNull;
 @Entity
 @Getter
 @Setter
-@NoArgsConstructor
 @ToString
 public class Product {
 
@@ -39,13 +37,13 @@ public class Product {
         this.price = price;
     }
 
-    public Product(Product p) {
-        if (null != p) {
-            this.name = p.name;
-            this.price = p.price;
-            this.description = p.description;
-        }
-    }
+//    public Product(Product p) {
+//        if (null != p) {
+//            this.name = p.name;
+//            this.price = p.price;
+//            this.description = p.description;
+//        }
+//    }
 
     public Long getId() {
         return id;
