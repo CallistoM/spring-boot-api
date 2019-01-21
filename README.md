@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/CallistoM/spring-boot-api.svg?branch=master)](https://travis-ci.org/CallistoM/spring-boot-api)
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=CallistoM_spring-boot-api&metric=alert_status)](https://sonarcloud.io/dashboard?id=CallistoM_spring-boot-api)
 
 Minimal [Spring Boot](http://projects.spring.io/spring-boot/) sample app.
 
